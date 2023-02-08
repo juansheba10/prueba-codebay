@@ -1,0 +1,501 @@
+body {
+    background-image: url("/assets/background-wall.jpg");
+}
+
+.wall {
+    width: 435px;
+    height: 667px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.pinpad-back {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    height: 600px;
+    background: linear-gradient(270deg, #222B3D 0%, #6A758B 100%);
+    box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(0, 0, 0, 0.7), inset 0px -14px 0px #161C27;
+    border-radius: 18px;
+}
+
+.pinpad-front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 370px;
+    height: 590px;
+    box-sizing: border-box;
+    background: #364157;
+    border-width: 1px 1px 1px 0px;
+    border-style: solid;
+    border-color: #68748A;
+}
+
+.lcd-screen {
+    margin-top: 20px;
+    width: 300px;
+    height: 130px;
+    box-sizing: border-box;
+    background: #E5F3F2;
+    border: 2px solid #242D3F;
+    box-shadow: inset 0px 3px 6px 3px rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.lcd-screen > img {
+    height: 30px;
+}
+
+.lcd-text {
+    font-family: "Ds-Digital";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #5D6A69;
+    
+}
+
+
+
+.keyboard {
+    width: 300px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    margin-top: 15px;
+}
+
+.button-pad {
+    width: 85px;
+    height: 75px;
+    margin: 28px;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    margin: 10px;
+    background: linear-gradient(180deg, #414D66 0%, #161C27 100%);
+    border: 2px solid rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 1px 1px rgba(143, 165, 208, 0.5), inset 0px 0px 0px 3px rgba(211, 226, 255, 0.19), inset 0px 0px 5px 2px rgba(105, 136, 198, 0.3);
+    border-radius: 6px
+}
+
+.button-pad.button-c {
+    font-family: 'Adobe Clean';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 33px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(180deg, #EF6476 0%, #CF5060 100%);
+    border: 2px solid rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 1px 1px rgba(143, 165, 208, 0.5), inset 0px 0px 0px 3px rgba(211, 226, 255, 0.19), inset 0px 0px 5px 2px rgba(105, 136, 198, 0.3);
+    border-radius: 6px
+}
+
+.button-pad.button-save {
+    font-family: 'Adobe Clean';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 33px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(180deg, #6AECB0 0%, #42A484 100%);
+    border: 2px solid rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 1px 1px rgba(143, 165, 208, 0.5), inset 0px 0px 0px 3px rgba(211, 226, 255, 0.19), inset 0px 0px 5px 2px rgba(105, 136, 198, 0.3);
+    border-radius: 6px;
+}
+.button-pad.number {
+    font-family: 'Adobe Clean';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.4);
+}
+
+.modal {
+    position: absolute;
+    width: 834px;
+    height: 275px;
+    left: 383px;
+    top: 252px;
+}
+
+
+.modal-content {
+    width: 370px;
+    height: 580px;
+    background: #F0F0F0;
+    border: 2px solid #949494;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5), 0px 8px 16px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    box-sizing: border-box;
+
+
+}
+
+.bienvenido {
+    font-family: 'Adobe Clean';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 45px;
+    text-align: center;
+    color: #747474;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+
+.instrucciones {
+    font-family: 'Adobe Clean';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #747474;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+
+.close-modal {
+    width: 17.5px;
+    height: 17.5px;
+    position: relative;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+
+
+/* MEDIA QUERY PARA DESKTOP */
+
+
+@media (min-width: 900px) {
+    
+    .wall {
+        width: 1435px;
+        height: 800px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .pinpad-back {
+        display: flex;
+        justify-content: center;
+        width: 400px;
+        height: 600px;
+        background: linear-gradient(270deg, #222B3D 0%, #6A758B 100%);
+        box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(0, 0, 0, 0.7), inset 0px -14px 0px #161C27;
+        border-radius: 18px;
+    }
+    
+    .pinpad-front {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 370px;
+        height: 590px;
+        box-sizing: border-box;
+        background: #364157;
+        border-width: 1px 1px 1px 0px;
+        border-style: solid;
+        border-color: #68748A;
+    }
+    
+    .lcd-screen {
+        margin-top: 20px;
+        width: 300px;
+        height: 130px;
+        box-sizing: border-box;
+        background: #E5F3F2;
+        border: 2px solid #242D3F;
+        box-shadow: inset 0px 3px 6px 3px rgba(0, 0, 0, 0.6);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .lcd-screen > img {
+        height: 30px;
+    }
+    
+    .lcd-text {
+        font-family: "Ds-Digital";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 50px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #5D6A69;
+        
+    }
+
+    .wrong {
+        font-family: "Ds-Digital";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 50px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #5D6A69;
+        
+    }
+    
+    
+    
+    .keyboard {
+        width: 300px;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        align-content: center;
+        margin-top: 15px;
+    }
+    
+    .button-pad {
+        width: 85px;
+        height: 75px;
+        margin: 28px;
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+        margin: 10px;
+        background: linear-gradient(180deg, #414D66 0%, #161C27 100%);
+        border: 2px solid rgba(0, 0, 0, 0.7);
+        box-shadow: 0px 0px 1px 1px rgba(143, 165, 208, 0.5), inset 0px 0px 0px 3px rgba(211, 226, 255, 0.19), inset 0px 0px 5px 2px rgba(105, 136, 198, 0.3);
+        border-radius: 6px
+    }
+    
+    .button-pad.button-c {
+        font-family: 'Adobe Clean';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 33px;
+        display: block;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+        text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.4);
+        background: linear-gradient(180deg, #EF6476 0%, #CF5060 100%);
+        border: 2px solid rgba(0, 0, 0, 0.7);
+        box-shadow: 0px 0px 1px 1px rgba(143, 165, 208, 0.5), inset 0px 0px 0px 3px rgba(211, 226, 255, 0.19), inset 0px 0px 5px 2px rgba(105, 136, 198, 0.3);
+        border-radius: 6px
+    }
+    
+    .button-pad.button-save {
+        font-family: 'Adobe Clean';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 33px;
+        display: block;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+        text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.4);
+        background: linear-gradient(180deg, #6AECB0 0%, #42A484 100%);
+        border: 2px solid rgba(0, 0, 0, 0.7);
+        box-shadow: 0px 0px 1px 1px rgba(143, 165, 208, 0.5), inset 0px 0px 0px 3px rgba(211, 226, 255, 0.19), inset 0px 0px 5px 2px rgba(105, 136, 198, 0.3);
+        border-radius: 6px;
+    }
+
+    .button-pad.button-enter {
+        font-family: 'Adobe Clean';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        display: block;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+        text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.4);
+        background: linear-gradient(180deg, #6AECB0 0%, #42A484 100%);
+        border: 2px solid rgba(0, 0, 0, 0.7);
+        box-shadow: 0px 0px 1px 1px rgba(143, 165, 208, 0.5), inset 0px 0px 0px 3px rgba(211, 226, 255, 0.19), inset 0px 0px 5px 2px rgba(105, 136, 198, 0.3);
+        border-radius: 6px;
+    }
+
+    .button-pad.number {
+        font-family: 'Adobe Clean';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        display: block;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+        text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.4);
+    }
+    
+    
+    
+    .modal-content {
+        width: 834px;
+        height: 280px;
+        background: #F0F0F0;
+        border: 2px solid #949494;
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5), 0px 8px 16px 8px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+    .modal {
+        position: absolute;
+        width: 834px;
+        height: 275px;
+        left: 325px;
+        top: 252px;
+    }
+    
+    
+    .bienvenido {
+        font-family: 'Adobe Clean';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 54px;
+        text-align: center;
+        color: #747474;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+        align-self: center;
+        width: 600px;
+        height: 70px;
+    }
+    
+    .instrucciones {
+        font-family: 'Adobe Clean';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+        color: #747474;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        -webkit-align-self: center;
+        -ms-flex-item-align: center;
+        align-self: center;
+        width: 380px;
+        height: 60px;
+    }
+    
+    .close-modal {
+        position: absolute;
+    width: 17,5px;
+    height: 17,5px;
+    right: 20px;
+    top: 20px;
+    }
+}
