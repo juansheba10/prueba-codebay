@@ -1,4 +1,6 @@
-Pinpad App
+<em> Pinpad App</em>
+
+
 Bienvenido al Pinpad App! En esta aplicación, se le pedirá que establezca un código PIN y lo guarde. Aquí hay algunas instrucciones para ayudarle en el proceso:
 
 Establecer código PIN
