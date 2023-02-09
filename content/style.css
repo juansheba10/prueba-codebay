@@ -3,6 +3,7 @@ body {
 }
 
 .wall {
+    padding-top: 50px;
     width: 435px;
     height: 667px;
     display: flex;
@@ -145,16 +146,16 @@ body {
 
 .modal {
     position: absolute;
-    width: 834px;
-    height: 275px;
-    left: 383px;
-    top: 252px;
+    width: 422px;
+    height: 244px;
+    left: 42px;
+    top: 70px;
 }
 
 
 .modal-content {
-    width: 370px;
-    height: 580px;
+    width: 366px;
+    height: 545px;
     background: #F0F0F0;
     border: 2px solid #949494;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5), 0px 8px 16px 8px rgba(0, 0, 0, 0.15);
@@ -186,7 +187,7 @@ body {
     font-family: 'Adobe Clean';
     font-style: normal;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 54px;
     line-height: 45px;
     text-align: center;
     color: #747474;
@@ -198,14 +199,15 @@ body {
     flex: 0 1 auto;
     -webkit-align-self: flex-end;
     -ms-flex-item-align: end;
-    align-self: flex-end;
+    align-self: center;
+    padding: 20px;
 }
 
 .instrucciones {
     font-family: 'Adobe Clean';
     font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
+    font-weight: 300;
+    font-size: 28px;
     line-height: 30px;
     text-align: center;
     color: #747474;
@@ -233,6 +235,141 @@ body {
     -webkit-align-self: flex-end;
     -ms-flex-item-align: end;
     align-self: flex-end;
+    padding: 20px;
+}
+
+.modal-content-2 {
+    width: 366px;
+    height: 545px;
+    background: #F0F0F0;
+    border: 2px solid #949494;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5), 0px 8px 16px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+.modal-2 {
+    position: absolute;
+    width: 422px;
+    height: 244px;
+    left: 42px;
+    top: 70px;
+}
+
+
+.bienvenido-2 {
+    font-family: 'Adobe Clean';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 54px;
+    line-height: 45px;
+    text-align: center;
+    color: #747474;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: center;
+    padding: 20px;
+}
+
+.instrucciones-2 {
+    font-family: 'Adobe Clean';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 30px;
+    text-align: center;
+    color: #747474;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+
+.close-modal-2 {
+    width: 17.5px;
+    height: 17.5px;
+    position: relative;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    padding: 20px;
+}
+
+/* .modal-container {
+    
+} */
+
+
+
+.modal-error {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 450px;
+    height: 79px;
+    background: #FFD600;
+    border-bottom: 2px solid #C2AF03; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* animation: slideDown 0.5s forwards; */
+}
+
+/* @keyframes slideDown {
+    from {
+      top: -100%;
+    }
+    to {
+      top: 0;
+    }
+  } */
+
+.modal-error > p {
+    
+    font-family: 'Adobe Clean';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 38px;
+    text-align: center;
+    color: #635905;
+    
 }
 
 
@@ -288,7 +425,7 @@ body {
         justify-content: space-around;
     }
     
-    .lcd-screen > img {
+    .lcd-screen.eye-icon {
         height: 30px;
     }
     
@@ -467,7 +604,6 @@ body {
         -ms-flex-item-align: end;
         align-self: center;
         width: 600px;
-        height: 70px;
     }
     
     .instrucciones {
@@ -498,4 +634,129 @@ body {
     right: 20px;
     top: 20px;
     }
+    .modal-content-2 {
+        width: 834px;
+        height: 280px;
+        background: #F0F0F0;
+        border: 2px solid #949494;
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5), 0px 8px 16px 8px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+    .modal-2 {
+        position: absolute;
+        width: 834px;
+        height: 275px;
+        left: 325px;
+        top: 252px;
+    }
+    
+    
+    .bienvenido-2 {
+        font-family: 'Adobe Clean';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 54px;
+        text-align: center;
+        color: #747474;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+        align-self: center;
+        width: 600px;
+    }
+    
+    .instrucciones-2 {
+        font-family: 'Adobe Clean';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+        color: #747474;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        -webkit-align-self: center;
+        -ms-flex-item-align: center;
+        align-self: center;
+        width: 380px;
+        height: 60px;
+    }
+    
+    .close-modal-2 {
+        position: absolute;
+    width: 17,5px;
+    height: 17,5px;
+    right: 20px;
+    top: 20px;
+    }
+
+    /* .modal-container {
+        
+    } */
+
+  
+
+    /* .modal-error {
+        position: absolute;
+        top: -100;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 1520px;
+        height: 50px;
+        background: #FFD600;
+        border-bottom: 2px solid #C2AF03; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: slideDown 0.5s forwards;
+    }
+
+    @keyframes slideDown {
+        from {
+          top: -100%;
+        }
+        to {
+          top: 0;
+        }
+      }
+
+    .modal-error > p {
+        
+        font-family: 'Adobe Clean';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 38px;
+        text-align: center;
+        color: #635905;
+        
+    } */
 }
