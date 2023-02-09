@@ -36,25 +36,31 @@ function handlePinInput() {
   buttons.forEach(function(button) {
     button.addEventListener("click", function() {
       if (button.classList.contains("number")) {
-        lcdText.innerHTML += button.innerHTML;
+        lcdText.value += button.innerHTML;
+        console.log(button.innerHTML)
       } else if (button.classList.contains("button-c")) {
-        lcdText.innerHTML = "";
+        lcdText.value = "";
       } else if (button.classList.contains("button-save")) {
-        if (/^\d+$/.test(lcdText.innerHTML)) {
-          pin = lcdText.innerHTML;
-          lcdText.innerHTML = "SAVED";
+        if (/^\d+$/.test(lcdText.value)) {
+          pin = lcdText.value;
+          lcdScreen.style.backgroundColor = "#DEF4DA";
+          lcdText.style.backgroundColor = "#DEF4DA"
+          lcdText.value = "SAVED";
           setTimeout(function() {
-            lcdText.innerHTML = "";
+            lcdText.value = "";
+            lcdScreen.style.backgroundColor = "#E5F3F2"
+            lcdText.style.backgroundColor = "#E5F3F2";
             showEnterPinModal();
           }, 2000);
           button.innerHTML = "ENTER";
           button.classList.remove("button-save");
           button.classList.add("button-enter");
         } else {
-          lcdScreen.style.backgroundColor = "#FFE4E4";
+          
           eyeIcon.style.display = "none";
-          lcdText.innerHTML = "NOT A NUMBER";
+          lcdText.value = "NOT A NUMBER";
           lcdText.classList.add("not-number")
+          lcdScreen.classList.add("not-number")
           setTimeout(function() {
             lcdText.innerHTML = "";
             eyeIcon.style.display = ""
@@ -62,22 +68,25 @@ function handlePinInput() {
           }, 2000);
         }
       } else if (button.classList.contains("button-enter")) {
-        if (lcdText.innerHTML === pin) {
-          lcdScreen.style.backgroundColor = "#DEF4DA";
-          lcdText.innerHTML = "Correct";
+        if (lcdText.value === pin) {
+          lcdText.value = "Correct";
           eyeIcon.style.display = "none";
+          lcdScreen.style.backgroundColor = "#DEF4DA";
+          lcdText.style.backgroundColor = "#DEF4DA"
           setTimeout(function() {
             window.location.href = "https://www.codebay-innovation.com/";
           }, 1000);
           
         } else {
           lcdScreen.style.backgroundColor = "#FFE4E4";
+          lcdText.style.backgroundColor = "#FFE4E4";
           eyeIcon.style.display = "none"
-          lcdText.innerHTML = "WRONG";
+          lcdText.value = "WRONG";
           setTimeout(function() {
-            lcdText.innerHTML = "";
+            lcdText.value = "";
             eyeIcon.style.display = ""
             lcdScreen.style.backgroundColor = "#E5F3F2"
+            lcdText.style.backgroundColor = "#E5F3F2";
           }, 2000);
           attempts--;
           showErrorModal()
@@ -138,19 +147,39 @@ function showErrorModal()  {
   <p class="text-error">Por favor, introduzca el código previamente establecido. Tiene ${attempts} intentos restantes. </p>
   </div>
   `;
-  // setTimeout(() => {
-  //   modalError.innerHTML = "";
-  // }, 2000);
+  setTimeout(() => {
+    modalError.innerHTML = "";
+  }, 2000);
   
   document.body.appendChild(modalError);
 }
+
+  
+
 
   // Function to initialize the app
   function init() {
   showSetPinModal();
   handlePinInput();
-  }
-  
+}
+
+const passwordInput = document.getElementById("passwordInput");
+const eyeIcon = document.querySelector(".eye-icon");
+
+eyeIcon.addEventListener("click", function() {
+   if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      eyeIcon.src = "/assets/visibility.png";
+   } else {
+     passwordInput.type = "password"
+     
+      eyeIcon.src = "/assets/visibility_off.png";
+   }
+});
+
+
+
   
   // Initialize the app on window load
-  window.addEventListener("load", init);
+window.addEventListener("load", init);
+  
