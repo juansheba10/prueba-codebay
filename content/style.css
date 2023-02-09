@@ -1,6 +1,6 @@
 body {
     box-sizing: border-box;
-    background-image: url("/background-wall.jpg");
+    background-image: url("/assets/background-wall.jpg");
 }
 
 .wall {
@@ -408,7 +408,7 @@ input[type="password"] {
     
     
     .wall {
-        width: 1435px;
+        width: auto;
         height: 800px;
         display: flex;
         justify-content: center;
@@ -579,7 +579,13 @@ input[type="password"] {
         text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.4);
     }
     
-    
+    .modal {
+        position: absolute;
+        width: 834px;
+        height: 275px;
+        top: 35%;
+        left: 26%
+    }
     
     .modal-content {
         width: 834px;
@@ -606,14 +612,9 @@ input[type="password"] {
         -webkit-align-items: flex-start;
         -ms-flex-align: start;
         align-items: flex-start;
+        
     }
-    .modal {
-        position: absolute;
-        width: 834px;
-        height: 275px;
-        left: 325px;
-        top: 252px;
-    }
+    
     
     
     .bienvenido {
@@ -633,6 +634,7 @@ input[type="password"] {
         -ms-flex-item-align: end;
         align-self: center;
         width: 600px;
+        margin-bottom: 6px;
     }
     
     .instrucciones {
@@ -715,6 +717,7 @@ input[type="password"] {
         -ms-flex-item-align: end;
         align-self: center;
         width: 600px;
+        margin-bottom: 6px;
     }
     
     .instrucciones-2 {
@@ -758,7 +761,7 @@ input[type="password"] {
         left: 0;
         right: 0;
         bottom: 0;
-        width: 1520px;
+        width: auto;
         height: 50px;
         background: #FFD600;
         border-bottom: 2px solid #C2AF03; 

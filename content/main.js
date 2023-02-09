@@ -4,19 +4,22 @@ let attempts = 3;
 
 // Function to show the first modal
 function showSetPinModal() {
+  
   const modal = document.createElement("div");
   modal.className = "modal";
   modal.innerHTML = `
     <div class="modal-content">
-      <img src="/close.png" alt="" class="close-modal">
+      <img src="/assets/close.png" alt="" class="close-modal">
       <p class="bienvenido">Bienvenido a Pinpad</p>
       <p class="instrucciones">Introduce un número de 6 digitos y dale a guardar.
       La próxima vez podrás usar tu número para acceder
       </p>
     </div>
   `;
-  
+
+ 
   document.body.appendChild(modal);
+
 
   document.querySelector(".wall").style.webkitFilter = "blur(5px)"
   const closeModal = document.querySelector(".close-modal");
@@ -36,13 +39,15 @@ function handlePinInput() {
   buttons.forEach(function(button) {
     button.addEventListener("click", function() {
       if (button.classList.contains("number")) {
-        lcdText.value += button.innerHTML;
-        console.log(button.innerHTML)
+        if (lcdText.value.length < 6) {
+          lcdText.value += button.innerHTML;
+        }
       } else if (button.classList.contains("button-c")) {
         lcdText.value = "";
       } else if (button.classList.contains("button-save")) {
         if (/^\d+$/.test(lcdText.value)) {
           pin = lcdText.value;
+          lcdText.type = "text"
           lcdScreen.style.backgroundColor = "#DEF4DA";
           lcdText.style.backgroundColor = "#DEF4DA"
           lcdText.value = "SAVED";
@@ -62,7 +67,7 @@ function handlePinInput() {
           lcdText.classList.add("not-number")
           lcdScreen.classList.add("not-number")
           setTimeout(function() {
-            lcdText.innerHTML = "";
+            lcdText.value = "";
             eyeIcon.style.display = ""
             lcdText.classList.remove("not-number")
           }, 2000);
@@ -107,7 +112,7 @@ function showEnterPinModal() {
   modal.className = "modal";
   modal.innerHTML = `
     <div class="modal-content-2">
-    <img src="/close.png" alt="" class="close-modal-2">
+    <img src="/assets/close.png" alt="" class="close-modal-2">
       <p class="bienvenido-2">Introduce tu codigo</p>
       <p class="instrucciones-2">Introduce el codigo de 6 digitos para continuar. (tienes ${attempts} intentos)</p>
     </div>
@@ -169,11 +174,11 @@ const eyeIcon = document.querySelector(".eye-icon");
 eyeIcon.addEventListener("click", function() {
    if (passwordInput.type === "password") {
       passwordInput.type = "text";
-      eyeIcon.src = "/visibility.png";
+      eyeIcon.src = "/assets/visibility.png";
    } else {
      passwordInput.type = "password"
      
-      eyeIcon.src = "/visibility_off.png";
+      eyeIcon.src = "/assets/visibility_off.png";
    }
 });
 
