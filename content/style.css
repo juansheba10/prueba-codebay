@@ -583,8 +583,9 @@ input[type="password"] {
         position: absolute;
         width: 834px;
         height: 275px;
-        top: 35%;
-        left: 26%
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%)
     }
     
     .modal-content {
@@ -665,6 +666,10 @@ input[type="password"] {
     right: 20px;
     top: 20px;
     }
+
+
+    /* Segundo Modal que se genere luego del usuario entrar el primer pin */
+
     .modal-content-2 {
         width: 834px;
         height: 280px;
@@ -749,11 +754,7 @@ input[type="password"] {
     top: 20px;
     }
 
-    /* .modal-container {
-        
-    } */
-
-  
+    /* Modal de error en la parte superior que aparezca desde arriba con animación */
 
     .modal-error {
         position: absolute;
