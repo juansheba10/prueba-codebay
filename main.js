@@ -8,7 +8,7 @@ function showSetPinModal() {
   modal.className = "modal";
   modal.innerHTML = `
     <div class="modal-content">
-      <img src="/assets/close.png" alt="" class="close-modal">
+      <img src="/close.png" alt="" class="close-modal">
       <p class="bienvenido">Bienvenido a Pinpad</p>
       <p class="instrucciones">Introduce un número de 6 digitos y dale a guardar.
       La próxima vez podrás usar tu número para acceder
@@ -107,7 +107,7 @@ function showEnterPinModal() {
   modal.className = "modal";
   modal.innerHTML = `
     <div class="modal-content-2">
-    <img src="/assets/close.png" alt="" class="close-modal-2">
+    <img src="git/close.png" alt="" class="close-modal-2">
       <p class="bienvenido-2">Introduce tu codigo</p>
       <p class="instrucciones-2">Introduce el codigo de 6 digitos para continuar. (tienes ${attempts} intentos)</p>
     </div>
@@ -169,11 +169,11 @@ const eyeIcon = document.querySelector(".eye-icon");
 eyeIcon.addEventListener("click", function() {
    if (passwordInput.type === "password") {
       passwordInput.type = "text";
-      eyeIcon.src = "/assets/visibility.png";
+      eyeIcon.src = "/visibility.png";
    } else {
      passwordInput.type = "password"
      
-      eyeIcon.src = "/assets/visibility_off.png";
+      eyeIcon.src = "/visibility_off.png";
    }
 });
 
