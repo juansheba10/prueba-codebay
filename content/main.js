@@ -107,7 +107,41 @@ function handlePinInput() {
 
 
 // Function to show the second modal
+function showEnterPinModal() {
+  const modal = document.createElement("div");
+  modal.className = "modal";
+  modal.innerHTML = `
+    <div class="modal-content-2">
+    <img src="/assets/close.png" alt="" class="close-modal-2">
+      <p class="bienvenido-2">Introduce tu codigo</p>
+      <p class="instrucciones-2">Introduce el codigo de 6 digitos para continuar. (tienes ${attempts} intentos)</p>
+    </div>
+  `;
+  document.body.appendChild(modal);
 
+  document.querySelector(".wall").style.webkitFilter = "blur(5px)"
+  const closeModal = document.querySelector(".close-modal-2");
+  closeModal.addEventListener("click", function() {
+    modal.style.display = "none";
+    document.querySelector(".wall").style.webkitFilter = "blur(0)"
+  });
+
+  
+    
+
+  const lcdText = document.querySelector(".lcd-text");
+  lcdText.addEventListener("input", function() {
+    if (lcdText.innerHTML === pin) {
+      window.location.href = "https://www.codebay-innovation.com/";
+    } else if (attempts === 0) {
+      window.location.href = "https://policia.es/";
+    } else {
+      --attempts;
+      showErrorModal()
+      lcdText.innerHTML = "ERROR";
+    }
+  });
+}
 
 function showErrorModal()  {
   console.log("hola")
