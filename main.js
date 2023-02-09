@@ -107,7 +107,7 @@ function showEnterPinModal() {
   modal.className = "modal";
   modal.innerHTML = `
     <div class="modal-content-2">
-    <img src="git/close.png" alt="" class="close-modal-2">
+    <img src="/close.png" alt="" class="close-modal-2">
       <p class="bienvenido-2">Introduce tu codigo</p>
       <p class="instrucciones-2">Introduce el codigo de 6 digitos para continuar. (tienes ${attempts} intentos)</p>
     </div>
